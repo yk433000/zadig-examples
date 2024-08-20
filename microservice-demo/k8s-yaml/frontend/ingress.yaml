@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+  labels:
+    app.kubernetes.io/instance: frontend
+    app.kubernetes.io/name: demo
+spec:
+  rules:
+  - host: {{.demo_domain}}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80

@@ -24,5 +24,5 @@ spec:
           name: vote
         resources:
           limits:
-            memory: 50Mi
+            memory: 500Mi
             cpu: 50m

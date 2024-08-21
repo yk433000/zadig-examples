@@ -7,6 +7,14 @@
       <id>tencentmaven</id>
       <name>tencent maven</name>
       <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+      <mirrorOf>*</mirrorOf>
+      <!--<mirrorOf>central</mirrorOf>-->
+    </mirror>
+    <mirror>
+      <id>aliyun-releases-mirror</id>
+      <name>Aliyun Internet Releases Repository mirror</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+      <!--<mirrorOf>*</mirrorOf>-->
       <mirrorOf>central</mirrorOf>
     </mirror>
   </mirrors>
